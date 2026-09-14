@@ -1,0 +1,8 @@
+# netlify.toml
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# The plugin is automatically applied, but you can declare it to pin a version.
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"

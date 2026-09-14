@@ -6,3 +6,4 @@ coverage
 .DS_Store
 *.log
 next-env.d.ts
+git config core.sshCommand "ssh -i ~/.ssh/id_ed25519_it -o IdentitiesOnly=yes"
