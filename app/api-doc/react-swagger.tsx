@@ -1,11 +1,12 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import type { ComponentType } from "react";
 import "swagger-ui-react/swagger-ui.css";
 
-// Dynamically import SwaggerUI with ssr:false because swagger-ui-react
-// is not compatible with React Server Components.
-const SwaggerUI = dynamic(() => import("swagger-ui-react"), { ssr: false });
+const SwaggerUI = dynamic(() => import("swagger-ui-react"), {
+  ssr: false,
+}) as ComponentType<{ spec: Record<string, unknown> }>;
 
 type Props = {
   spec: Record<string, unknown>;
